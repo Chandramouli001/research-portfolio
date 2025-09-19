@@ -43,65 +43,9 @@ const publications = [
     doi: "Not Available Yet",
     description: "The paper discusses hybrid LoRa communication frameworks to enhance UAV-based disaster management systems, focusing on efficiency and reliability of data transmission."
   },
-  {
-    title: "Prospects and Challenges in UAV-Based Communication for Disaster Management",
-    type: "Conference Paper",
-    year: 2024,
-    doi: "Not Available Yet",
-    description: "A review of UAV-enabled communication systems in disaster scenarios, analyzing opportunities and challenges in maintaining connectivity and data accuracy."
-  },
-
-  // Journal Articles
-
-  {
-    title: "TinyML Enabled Smart T-Shirt for Multimodal Epileptic Seizure Detection and Prediction",
-    type: "Journal Article",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Presents a smart wearable integrating TinyML techniques to monitor physiological signals and predict epileptic seizures, enabling proactive intervention."
-  },
-
-  // Books
  
-
-  // Book Chapters
-  {
-    title: "System Framework for Seizure Administration",
-    type: "Book Chapter",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Chapter discussing a system architecture for seizure monitoring and administration using smart wearable devices and real-time data analysis."
-  },
-
-  // Patents
-  {
-    title: "IoT-based Heat Stress Adaptive Crop Recommendation System",
-    type: "Patent",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Patent covering an IoT system that monitors environmental and plant parameters to recommend adaptive crop management strategies for heat stress conditions."
-  },
-  {
-    title: "Medicinal Plant Identification and Classification of Himalayan Region with UAV",
-    type: "Patent",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Covers UAV-based systems for accurate identification and classification of medicinal plants in the Himalayan region, integrating AI and imaging techniques."
-  },
-  {
-    title: "IoT-Based Smart Solar Charging Bag with Integrated Security and Emergency Features",
-    type: "Patent",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "A patent for a smart solar-powered bag with IoT integration providing charging, security alerts, and emergency SOS functionalities."
-  },
-  {
-    title: "Smart T-Shirt with Medical Monitoring",
-    type: "Patent",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Describes a wearable T-shirt capable of monitoring medical parameters like heart rate, SpO2, and temperature, integrated with alert systems for health safety."
-  },
+ 
+  
 ];
 
 
@@ -310,3 +254,4 @@ const publications = [
     </div>
   );
 }
+
