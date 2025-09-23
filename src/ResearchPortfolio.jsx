@@ -27,7 +27,34 @@ const publications = [
     url: "https://ijsci.com/index.php/home/article/view/314",
     description: "This journal article details the design of an interactive robot combining AI-driven voice assistance, physical interaction via handshake, projection features, and mobility for human-robot interaction applications."
   },
-   {
+  
+  {
+    title: "Prospects of Hybrid LoRa Communication Framework for Ultra-Efficient UAV Mediated Disaster Management",
+    type: "Conference Paper",
+    year: 2025,
+    doi: "Not Available Yet",
+    description: "The paper discusses hybrid LoRa communication frameworks to enhance UAV-based disaster management systems, focusing on efficiency and reliability of data transmission."
+  },
+  // {
+  //   title: "Prospects and Challenges in UAV-Based Communication for Disaster Management",
+  //   type: "Conference Paper",
+  //   year: 2024,
+  //   doi: "Not Available Yet",
+  //   description: "A review of UAV-enabled communication systems in disaster scenarios, analyzing opportunities and challenges in maintaining connectivity and data accuracy."
+  // },
+
+  // Journal Articles
+
+  // {
+  //   title: "TinyML Enabled Smart T-Shirt for Multimodal Epileptic Seizure Detection and Prediction",
+  //   type: "Journal Article",
+  //   year: 2023,
+  //   doi: "Not Available Yet",
+  //   description: "Presents a smart wearable integrating TinyML techniques to monitor physiological signals and predict epileptic seizures, enabling proactive intervention."
+  // },
+
+  // Books
+  {
     title: "Use of Artificial Intelligence in Engineering",
     type: "Book",
     year: 2023,
@@ -36,16 +63,45 @@ const publications = [
     url:"https://www.amazon.com/dp/B0FQ6HY8SX",
     description: "A comprehensive book on applications of artificial intelligence in engineering domains, covering theory, frameworks, and real-world use cases."
   },
-  {
-    title: "Prospects of Hybrid LoRa Communication Framework for Ultra-Efficient UAV Mediated Disaster Management",
-    type: "Conference Paper",
-    year: 2025,
-    doi: "Not Available Yet",
-    description: "The paper discusses hybrid LoRa communication frameworks to enhance UAV-based disaster management systems, focusing on efficiency and reliability of data transmission."
-  },
- 
- 
-  
+
+  // // Book Chapters
+  // {
+  //   title: "System Framework for Seizure Administration",
+  //   type: "Book Chapter",
+  //   year: 2023,
+  //   doi: "Not Available Yet",
+  //   description: "Chapter discussing a system architecture for seizure monitoring and administration using smart wearable devices and real-time data analysis."
+  // },
+
+  // // Patents
+  // {
+  //   title: "IoT-based Heat Stress Adaptive Crop Recommendation System",
+  //   type: "Patent",
+  //   year: 2023,
+  //   doi: "Not Available Yet",
+  //   description: "Patent covering an IoT system that monitors environmental and plant parameters to recommend adaptive crop management strategies for heat stress conditions."
+  // },
+  // {
+  //   title: "Medicinal Plant Identification and Classification of Himalayan Region with UAV",
+  //   type: "Patent",
+  //   year: 2023,
+  //   doi: "Not Available Yet",
+  //   description: "Covers UAV-based systems for accurate identification and classification of medicinal plants in the Himalayan region, integrating AI and imaging techniques."
+  // },
+  // {
+  //   title: "IoT-Based Smart Solar Charging Bag with Integrated Security and Emergency Features",
+  //   type: "Patent",
+  //   year: 2023,
+  //   doi: "Not Available Yet",
+  //   description: "A patent for a smart solar-powered bag with IoT integration providing charging, security alerts, and emergency SOS functionalities."
+  // },
+  // {
+  //   title: "Smart T-Shirt with Medical Monitoring",
+  //   type: "Patent",
+  //   year: 2023,
+  //   doi: "Not Available Yet",
+  //   description: "Describes a wearable T-shirt capable of monitoring medical parameters like heart rate, SpO2, and temperature, integrated with alert systems for health safety."
+  // },
 ];
 
 
@@ -88,7 +144,7 @@ const publications = [
       <img src="https://img.icons8.com/?size=100&id=drPiDBy9kkJ3&format=png&color=000000" alt="Google Scholar" className="social-icon" /> Google Scholar
     </a>
     <a href="https://orcid.org/0009-0004-9759-194X" target="_blank" rel="noopener noreferrer">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/orcid.svg" alt="ORCID" className="social-icon" /> ORCID
+      <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/orcididimage.png" alt="ORCID" className="social-icon" /> ORCID
     </a>
     <a href="https://www.researchgate.net/profile/YourProfile" target="_blank" rel="noopener noreferrer">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/researchgate.svg" alt="ResearchGate" className="social-icon" /> ResearchGate
@@ -236,22 +292,39 @@ const publications = [
               <h3>Kriti Award</h3>
               <p>Highest GPA 2023</p>
             </div>
+               <div className="card">
+              <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/WhatsApp%20Image%202025-09-23%20at%2022.11.45_2989ed6e.jpg" alt="Grant" />
+              <h3>JIS INNOVATION AWARD</h3>
+              <p>Paper Publication 2022</p>
+            </div> 
           </div>
         </section>
 
-        {/* Courses & Certifications Section */}
-        <section>
-          <h2>Courses & Certifications</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="card">Embedded Systems Desgin - NPTEL</div>
-            <div className="card">Delta Full Stack Web Development Course - Apnacollege</div>
-            <div className="card">Object Oriented Desging C++ – Coursera</div>
-            <div className="card">Introduction to IoT – NPTEL</div>
-          </div>
-        </section>
+     {/* Certificates Section */}
+{/* Certificates Section */}
+<section>
+  <h2>Certificates</h2>
+  <div className="certificates-carousel">
+    <div className="certificates-track">
+      {[
+        "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.31_33273d8e.jpg?raw=true",
+        "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.30_db9b48ec.jpg?raw=true"
+        ,
+        "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.16_2dcc8a03.jpg?raw=true",
+        "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.17_29ea9be7.jpg?raw=true",
+             "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.16_10de8ebf.jpg?raw=true"
+
+      ].map((img, i) => (
+        <div key={i} className="certificate-card">
+          <img src={img} alt={`Certificate ${i + 1}`} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       </main>
     </div>
   );
 }
-
