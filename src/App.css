@@ -359,3 +359,42 @@ section img {
     padding: 0.3rem 0.6rem;
   }
 }
+.certificates-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  cursor: grab;
+}
+
+.certificates-carousel:active {
+  cursor: grabbing;
+}
+
+.certificates-track {
+  display: flex;
+  gap: 1rem;
+}
+
+.certificate-card {
+  min-width: 300px; /* Adjust width for one column */
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  background: var(--card, #fff);
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: scale(1.03);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
