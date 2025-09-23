@@ -125,6 +125,12 @@ li {
   border: 1px solid #d1d5db;
   background: var(--card-bg);
   cursor: pointer;
+  color: #222; /* default text color */
+}
+
+[data-theme="dark"] .filters button {
+  color: #fff; /* white text in dark mode */
+  border-color: #555; /* optional: softer border in dark mode */
 }
 .filters .active {
   background: var(--accent);
