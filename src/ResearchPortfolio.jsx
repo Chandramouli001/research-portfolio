@@ -146,7 +146,7 @@ const publications = [
     <a href="https://orcid.org/0009-0004-9759-194X" target="_blank" rel="noopener noreferrer">
       <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/orcididimage.png" alt="ORCID" className="social-icon" /> ORCID
     </a>
-    <a href="https://www.researchgate.net/profile/YourProfile" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.researchgate.net/profile/Chandramouli-Haldar-4" target="_blank" rel="noopener noreferrer">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/researchgate.svg" alt="ResearchGate" className="social-icon" /> ResearchGate
     </a>
   </div>
@@ -328,3 +328,4 @@ const publications = [
     </div>
   );
 }
+
