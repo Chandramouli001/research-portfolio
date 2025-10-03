@@ -147,7 +147,7 @@ const publications = [
       <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/orcididimage.png" alt="ORCID" className="social-icon" /> ORCID
     </a>
     <a href="https://www.researchgate.net/profile/Chandramouli-Haldar-4" target="_blank" rel="noopener noreferrer">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/researchgate.svg" alt="ResearchGate" className="social-icon" /> ResearchGate
+      <img src="https://i.sstatic.net/i3C9B.png" alt="ResearchGate" className="social-icon" /> ResearchGate
     </a>
   </div>
 
@@ -309,7 +309,7 @@ const publications = [
       {[
         "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.31_33273d8e.jpg?raw=true",
         "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.30_db9b48ec.jpg?raw=true"
-        ,
+        , "https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/Chandramouli%20Haldar_Certificate%20for%20Paper%20Presentation%20at%20Bhavisya%20Entrepreneur%202025_page-0001.jpg",
         "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.16_2dcc8a03.jpg?raw=true",
         "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.17_29ea9be7.jpg?raw=true",
              "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.16_10de8ebf.jpg?raw=true"
@@ -328,4 +328,5 @@ const publications = [
     </div>
   );
 }
+
 
