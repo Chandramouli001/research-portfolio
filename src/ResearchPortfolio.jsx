@@ -147,7 +147,7 @@ const publications = [
       <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/orcididimage.png" alt="ORCID" className="social-icon" /> ORCID
     </a>
     <a href="https://www.researchgate.net/profile/Chandramouli-Haldar-4" target="_blank" rel="noopener noreferrer">
-      <img src="https://i.sstatic.net/i3C9B.png" alt="ResearchGate" className="social-icon" /> ResearchGate
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" className="social-icon" /> ResearchGate
     </a>
   </div>
 
@@ -328,5 +328,6 @@ const publications = [
     </div>
   );
 }
+
 
 
