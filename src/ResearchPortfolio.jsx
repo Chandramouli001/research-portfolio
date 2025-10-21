@@ -5,6 +5,33 @@ import "./App.css";
 export default function ResearchPortfolio() {
   const [filter, setFilter] = useState("all");
   const [theme, setTheme] = useState("light");
+// Function to translate text using Google's free translate API (no key)
+const translateText = async (text, targetLang) => {
+  try {
+    const response = await fetch(
+      `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(
+        text
+      )}`
+    );
+    const data = await response.json();
+    return data[0].map((item) => item[0]).join("");
+  } catch (error) {
+    console.error("Translation failed:", error);
+    return text;
+  }
+};
+
+// Function to translate all visible text on the page
+const translatePage = async (targetLang) => {
+  const elements = document.querySelectorAll("h1, h2, h3, p, li, button, a");
+  for (const el of elements) {
+    const original = el.innerText.trim();
+    if (original) {
+      const translated = await translateText(original, targetLang);
+      el.innerText = translated;
+    }
+  }
+};
 
   // Apply theme to <html> element
   useEffect(() => {
@@ -35,23 +62,23 @@ const publications = [
     doi: "Not Available Yet",
     description: "The paper discusses hybrid LoRa communication frameworks to enhance UAV-based disaster management systems, focusing on efficiency and reliability of data transmission."
   },
-  // {
-  //   title: "Prospects and Challenges in UAV-Based Communication for Disaster Management",
-  //   type: "Conference Paper",
-  //   year: 2024,
-  //   doi: "Not Available Yet",
-  //   description: "A review of UAV-enabled communication systems in disaster scenarios, analyzing opportunities and challenges in maintaining connectivity and data accuracy."
-  // },
+  {
+    title: "Prospects and Challenges in UAV-Based Communication for Disaster Management",
+    type: "Conference Paper",
+    year: 2024,
+    doi: "Not Available Yet",
+    description: "A review of UAV-enabled communication systems in disaster scenarios, analyzing opportunities and challenges in maintaining connectivity and data accuracy."
+  },
 
   // Journal Articles
 
-  // {
-  //   title: "TinyML Enabled Smart T-Shirt for Multimodal Epileptic Seizure Detection and Prediction",
-  //   type: "Journal Article",
-  //   year: 2023,
-  //   doi: "Not Available Yet",
-  //   description: "Presents a smart wearable integrating TinyML techniques to monitor physiological signals and predict epileptic seizures, enabling proactive intervention."
-  // },
+  {
+    title: "TinyML Enabled Smart T-Shirt for Multimodal Epileptic Seizure Detection and Prediction",
+    type: "Journal Article",
+    year: 2023,
+    doi: "Not Available Yet",
+    description: "Presents a smart wearable integrating TinyML techniques to monitor physiological signals and predict epileptic seizures, enabling proactive intervention."
+  },
 
   // Books
   {
@@ -65,43 +92,43 @@ const publications = [
   },
 
   // // Book Chapters
-  // {
-  //   title: "System Framework for Seizure Administration",
-  //   type: "Book Chapter",
-  //   year: 2023,
-  //   doi: "Not Available Yet",
-  //   description: "Chapter discussing a system architecture for seizure monitoring and administration using smart wearable devices and real-time data analysis."
-  // },
+  {
+    title: "System Framework for Seizure Administration",
+    type: "Book Chapter",
+    year: 2023,
+    doi: "Not Available Yet",
+    description: "Chapter discussing a system architecture for seizure monitoring and administration using smart wearable devices and real-time data analysis."
+  },
 
   // // Patents
-  // {
-  //   title: "IoT-based Heat Stress Adaptive Crop Recommendation System",
-  //   type: "Patent",
-  //   year: 2023,
-  //   doi: "Not Available Yet",
-  //   description: "Patent covering an IoT system that monitors environmental and plant parameters to recommend adaptive crop management strategies for heat stress conditions."
-  // },
-  // {
-  //   title: "Medicinal Plant Identification and Classification of Himalayan Region with UAV",
-  //   type: "Patent",
-  //   year: 2023,
-  //   doi: "Not Available Yet",
-  //   description: "Covers UAV-based systems for accurate identification and classification of medicinal plants in the Himalayan region, integrating AI and imaging techniques."
-  // },
-  // {
-  //   title: "IoT-Based Smart Solar Charging Bag with Integrated Security and Emergency Features",
-  //   type: "Patent",
-  //   year: 2023,
-  //   doi: "Not Available Yet",
-  //   description: "A patent for a smart solar-powered bag with IoT integration providing charging, security alerts, and emergency SOS functionalities."
-  // },
-  // {
-  //   title: "Smart T-Shirt with Medical Monitoring",
-  //   type: "Patent",
-  //   year: 2023,
-  //   doi: "Not Available Yet",
-  //   description: "Describes a wearable T-shirt capable of monitoring medical parameters like heart rate, SpO2, and temperature, integrated with alert systems for health safety."
-  // },
+  {
+    title: "IoT-based Heat Stress Adaptive Crop Recommendation System",
+    type: "Patent",
+    year: 2023,
+    doi: "Not Available Yet",
+    description: "Patent covering an IoT system that monitors environmental and plant parameters to recommend adaptive crop management strategies for heat stress conditions."
+  },
+  {
+    title: "Medicinal Plant Identification and Classification of Himalayan Region with UAV",
+    type: "Patent",
+    year: 2023,
+    doi: "Not Available Yet",
+    description: "Covers UAV-based systems for accurate identification and classification of medicinal plants in the Himalayan region, integrating AI and imaging techniques."
+  },
+  {
+    title: "IoT-Based Smart Solar Charging Bag with Integrated Security and Emergency Features",
+    type: "Patent",
+    year: 2023,
+    doi: "Not Available Yet",
+    description: "A patent for a smart solar-powered bag with IoT integration providing charging, security alerts, and emergency SOS functionalities."
+  },
+  {
+    title: "Smart T-Shirt with Medical Monitoring",
+    type: "Patent",
+    year: 2023,
+    doi: "Not Available Yet",
+    description: "Describes a wearable T-shirt capable of monitoring medical parameters like heart rate, SpO2, and temperature, integrated with alert systems for health safety."
+  },
 ];
 
 
@@ -152,18 +179,18 @@ const publications = [
   </div>
 
   {/* Language Switch Flags */}
-  <div className="language-switch">
-    <img 
-      src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" 
-      alt="English" 
-      onClick={() => console.log("Translate to English")} 
-    />
-    <img 
-      src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" 
-      alt="Japanese" 
-      onClick={() => console.log("Translate to Japanese")} 
-    />
-  </div>
+<div className="language-switch">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
+    alt="English"
+    onClick={() => translatePage("en")}
+  />
+  <img
+    src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg"
+    alt="Japanese"
+    onClick={() => translatePage("ja")}
+  />
+</div>
 </aside>
 
 
@@ -328,6 +355,5 @@ const publications = [
     </div>
   );
 }
-
 
 
