@@ -140,7 +140,7 @@ const publications = [
       {/* Sidebar */}
      <aside className="sidebar">
   <img
-    src="https://media.licdn.com/dms/image/v2/D5603AQGGZ-v9U2nylA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728062431795?e=2147483647&v=beta&t=8ThumINCZb8nZ_zUCkzyWH0elH5hdIrbsayRk-8sc5c"
+    src="https://media.licdn.com/dms/image/v2/D4D03AQGjHj7LaQdGlA/profile-displayphoto-crop_800_800/B4DZrKUgaoIkAQ-/0/1764330966549?e=1767225600&v=beta&t=_38npz00BZQQkposBwlap74oGkKF2RiH7CaR6sw7EVc"
     alt="Profile"
     className="profile-pic"
   />
@@ -355,5 +355,6 @@ const publications = [
     </div>
   );
 }
+
 
 
