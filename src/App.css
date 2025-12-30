@@ -404,3 +404,123 @@ section img {
   border-radius: 8px;
 }
 
+/* ===== Image Click Zoom / Lightbox ===== */
+
+/* Overlay */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Enlarged image */
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  object-fit: contain;
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Cursor hint on clickable images */
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.zoomable:hover {
+  transform: scale(1.02);
+}
+
+/* ===== Achievements Slider ===== */
+
+.achievements-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  cursor: grab;
+}
+
+.achievements-carousel:active {
+  cursor: grabbing;
+}
+
+.achievements-track {
+  display: flex;
+  gap: 1rem;
+}
+
+.achievement-card {
+  min-width: 300px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: scale(1.03);
+}
+
+.achievement-card img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+/* Navigation buttons inside image modal */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.nav-btn.left {
+  left: 20px;
+}
+
+.nav-btn.right {
+  right: 20px;
+}
+
+.nav-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+/* Hide arrows on very small screens (swipe still works) */
+@media (max-width: 480px) {
+  .nav-btn {
+    display: none;
+  }
+}
+
+
