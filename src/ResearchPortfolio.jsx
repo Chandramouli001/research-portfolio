@@ -2,9 +2,18 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+// JSON imports
+import publications from "./data/publications.json";
+import experience from "./data/experience.json";
+import education from "./data/education.json";
+import researchInterests from "./data/researchInterests.json";
+import achievements from "./data/achievements.json";
+import certificates from "./data/certificates.json";
+
 export default function ResearchPortfolio() {
   const [filter, setFilter] = useState("all");
   const [theme, setTheme] = useState("light");
+  
 // Function to translate text using Google's free translate API (no key)
 const translateText = async (text, targetLang) => {
   try {
@@ -33,157 +42,72 @@ const translatePage = async (targetLang) => {
   }
 };
 
-  // Apply theme to <html> element
+  // Image modal states (existing + added)
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [imageList, setImageList] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Apply theme
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
-const publications = [
-  // Conference Papers
-  {
-    title: "Emergence of Transfer Learning towards Specific Identification of Alzheimer’s Disease – A Prospective Approach",
-    type: "Conference Paper",
-    year: 2025,
-    doi: "10.1109/IEEECONF64992.2025.10962879",
-    description: "This conference paper explores the application of transfer learning for early and specific detection of Alzheimer’s Disease, leveraging medical imaging datasets to improve diagnostic accuracy."
-  },  
-  {
-    title: "Design and Development of a Multi-Functional Interactive Robot with Handshake, AI Voice Assistance, Projection, and Mobility",
-    type: "Journal Article",
-    year: 2024,
-    url: "https://ijsci.com/index.php/home/article/view/314",
-    description: "This journal article details the design of an interactive robot combining AI-driven voice assistance, physical interaction via handshake, projection features, and mobility for human-robot interaction applications."
-  },
-  
-  {
-    title: "Prospects of Hybrid LoRa Communication Framework for Ultra-Efficient UAV Mediated Disaster Management",
-    type: "Conference Paper",
-    year: 2025,
-    doi: "Not Available Yet",
-    description: "The paper discusses hybrid LoRa communication frameworks to enhance UAV-based disaster management systems, focusing on efficiency and reliability of data transmission."
-  },
-  {
-    title: "Prospects and Challenges in UAV-Based Communication for Disaster Management",
-    type: "Conference Paper",
-    year: 2024,
-    doi: "Not Available Yet",
-    description: "A review of UAV-enabled communication systems in disaster scenarios, analyzing opportunities and challenges in maintaining connectivity and data accuracy."
-  },
-
-  // Journal Articles
-
-  {
-    title: "TinyML Enabled Smart T-Shirt for Multimodal Epileptic Seizure Detection and Prediction",
-    type: "Journal Article",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Presents a smart wearable integrating TinyML techniques to monitor physiological signals and predict epileptic seizures, enabling proactive intervention."
-  },
-
-  // Books
-  {
-    title: "Use of Artificial Intelligence in Engineering",
-    type: "Book",
-    year: 2023,
-    isbn: "979-8264115646",
-    asin: "B0FQ6HY8SX",
-    url:"https://www.amazon.com/dp/B0FQ6HY8SX",
-    description: "A comprehensive book on applications of artificial intelligence in engineering domains, covering theory, frameworks, and real-world use cases."
-  },
-
-  // // Book Chapters
-  {
-    title: "System Framework for Seizure Administration",
-    type: "Book Chapter",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Chapter discussing a system architecture for seizure monitoring and administration using smart wearable devices and real-time data analysis."
-  },
-
-  // // Patents
-  {
-    title: "IoT-based Heat Stress Adaptive Crop Recommendation System",
-    type: "Patent",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Patent covering an IoT system that monitors environmental and plant parameters to recommend adaptive crop management strategies for heat stress conditions."
-  },
-  {
-    title: "Medicinal Plant Identification and Classification of Himalayan Region with UAV",
-    type: "Patent",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Covers UAV-based systems for accurate identification and classification of medicinal plants in the Himalayan region, integrating AI and imaging techniques."
-  },
-  {
-    title: "IoT-Based Smart Solar Charging Bag with Integrated Security and Emergency Features",
-    type: "Patent",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "A patent for a smart solar-powered bag with IoT integration providing charging, security alerts, and emergency SOS functionalities."
-  },
-  {
-    title: "Smart T-Shirt with Medical Monitoring",
-    type: "Patent",
-    year: 2023,
-    doi: "Not Available Yet",
-    description: "Describes a wearable T-shirt capable of monitoring medical parameters like heart rate, SpO2, and temperature, integrated with alert systems for health safety."
-  },
-];
-
-
   const filteredPublications =
-    filter === "all" ? publications : publications.filter((p) => p.type === filter);
+    filter === "all"
+      ? publications
+      : publications.filter((p) => p.type === filter);
 
   return (
     <div className={`portfolio-container ${theme}`}>
       {/* Sidebar */}
-     <aside className="sidebar">
-  <img
-    src="https://media.licdn.com/dms/image/v2/D4D03AQGjHj7LaQdGlA/profile-displayphoto-crop_800_800/B4DZrKUgaoIkAQ-/0/1764330966549?e=1767225600&v=beta&t=_38npz00BZQQkposBwlap74oGkKF2RiH7CaR6sw7EVc"
-    alt="Profile"
-    className="profile-pic"
-  />
-  <h1 className="name">Chandramouli Haldar</h1>
-    <p className="role">Student | Researcher | Innovator</p>
-  <p className="tagline">Passionate about bridging hardware & software</p>
-  <p className="location"> 📍 Kolkata, India</p>
-    <div className="contact-emails">
-  </div>
+      <aside className="sidebar">
+        <img src="/img/dp.png" alt="Profile" className="profile-pic" />
+        <h1 className="name">Chandramouli Haldar</h1>
+        <p className="role">Student | Researcher | Innovator</p>
+        <p className="tagline">Passionate about bridging hardware & software</p>
+        <p className="location">📍 Kolkata, India</p>
 
-  <div className="social-links">
- <a className="no-hover">
-      <img src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000" className="social-icon" /> Chandramoulihaldar@gmail.com
-    </a>
-<a className="no-hover">
-      <img src="https://img.icons8.com/?size=100&id=35084&format=png&color=000000" alt="GitHub" className="social-icon" /> chandramouli@novatech-is.in
-    </a>
-    <a href="https://www.linkedin.com/in/chandramouli01/" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" className="social-icon" /> LinkedIn
-    </a>
-    <a href="https://github.com/Chandramouli001" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.icons8.com/?size=100&id=63777&format=png&color=000000" alt="GitHub" className="social-icon" /> GitHub
-    </a>
-    <a href="https://www.youtube.com/@Chandram0uli" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="YouTube" className="social-icon" /> YouTube
-    </a>
-    <a href="https://scholar.google.com/citations?user=VXo1zqUAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.icons8.com/?size=100&id=drPiDBy9kkJ3&format=png&color=000000" alt="Google Scholar" className="social-icon" /> Google Scholar
-    </a>
-    <a href="https://orcid.org/0009-0004-9759-194X" target="_blank" rel="noopener noreferrer">
-      <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/orcididimage.png" alt="ORCID" className="social-icon" /> ORCID
-    </a>
-    <a href="https://www.researchgate.net/profile/Chandramouli-Haldar-4" target="_blank" rel="noopener noreferrer">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" className="social-icon" /> ResearchGate
-    </a>
-  </div>
+        <div className="social-links">
+          <a className="no-hover">
+            <img src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000" className="social-icon" />
+            Chandramoulihaldar@gmail.com
+          </a>
+          <a className="no-hover">
+            <img src="https://img.icons8.com/?size=100&id=35084&format=png&color=000000" className="social-icon" />
+            chandramouli@novatech-is.in
+          </a>
+          <a href="https://www.linkedin.com/in/chandramouli01/" target="_blank" rel="noreferrer">
+            <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" className="social-icon" />
+            LinkedIn
+          </a>
+          <a href="https://github.com/Chandramouli001" target="_blank" rel="noreferrer">
+            <img src="https://img.icons8.com/?size=100&id=63777&format=png&color=000000" className="social-icon" />
+            GitHub
+          </a>
+          <a href="https://www.youtube.com/@Chandram0uli" target="_blank" rel="noreferrer">
+            <img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" className="social-icon" />
+            YouTube
+          </a>
+          <a href="https://scholar.google.com/citations?user=VXo1zqUAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer">
+            <img src="https://img.icons8.com/?size=100&id=drPiDBy9kkJ3&format=png&color=000000" className="social-icon" />
+            Google Scholar
+          </a>
+          <a href="https://orcid.org/0009-0004-9759-194X" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/orcididimage.png" className="social-icon" />
+            ORCID
+          </a>
+          <a href="https://www.researchgate.net/profile/Chandramouli-Haldar-4" target="_blank" rel="noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" className="social-icon" />
+            ResearchGate
+          </a>
+        </div>
 
-  {/* Language Switch Flags */}
+          {/* Language Switch Flags */}
 <div className="language-switch">
   <img
     src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
     alt="English"
-    onClick={() => translatePage("en")}
+    onClick={() => window.location.reload()}
   />
   <img
     src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg"
@@ -191,170 +115,199 @@ const publications = [
     onClick={() => translatePage("ja")}
   />
 </div>
-</aside>
-
+      </aside>
 
       {/* Main Content */}
       <main className="main-content">
-        {/* Bio Section */}
+        {/* Bio */}
         <section className="bio-section">
           <div className="bio-header">
             <h2>Bio</h2>
             <button
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               className="theme-toggle-btn"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             >
-              {theme === "light" ? "🌙 Dark" : "☀️ Lite"}
+              {theme === "light" ? "🌙 Dark" : "☀️ Light"}
             </button>
           </div>
+
           <p className="bio-text">
-            Chandramouli Haldar is a student of Computer Science and Engineering [2023-26] at Guru Nanak Institute of Technology, Kolkata. He also holds a Diploma in Electronics and Telecommunication Engineering [2020-23]. His areas of research interest are IoT, Embedded Systems, AI, TinyML, UAVs, LoRa, and other new-generation technologies.
+            Chandramouli Haldar has an academic background in Computer Science and Engineering,
+            along with a diploma in Electronics and Telecommunication Engineering.
           </p>
           <p className="bio-text">
-            He also has professional experience as a Junior Technical Faculty at Euphoria GenX, where he engaged in mentoring students, guiding projects, and imparting hands-on training in MongoDB in BCT Training.
+            He has professional experience as a Junior Technical Faculty at Euphoria GenX,
+            contributing to mentoring, project guidance, and hands-on MongoDB training.
           </p>
           <p className="bio-text">
-            Apart from his educational and career endeavors, Chandramouli is an avid learner of the Japanese language. He has always been fascinated by Japan’s vibrant culture and advanced technology, and is inspired by the nation's capability to balance tradition with innovation.
+            He gained international academic exposure through an innovation-focused internship
+            at the Asian Institute of Technology (AIT), Bangkok, working with geospatial data,
+            QGIS, and real-world datasets.
+          </p>
+          <p className="bio-text">
+            He is also an active learner of the Japanese language and is inspired by Japan’s
+            balance of tradition and advanced technology.
           </p>
         </section>
 
-        {/* Experience Section */}
+        {/* Experience */}
         <section>
           <h2>Experience</h2>
           <ul>
-            <li>
-              <strong>Junior Technical Faculty</strong> – Euphoria GenX (2025)
-            </li>
+            {experience.map((exp, i) => (
+              <li key={i}>
+                <strong>{exp.role}</strong> – {exp.organization} ({exp.year})
+              </li>
+            ))}
           </ul>
         </section>
 
-        {/* Education Section */}
+        {/* Education */}
         <section>
           <h2>Education</h2>
           <ul>
-            <li>B.Tech in Computer Science & Engineering, GNIT, Kolkata, 2026</li>
-            <li>Diploma in Electronics & Telecommunication Engineering, GNIT, Kolkata, 2023</li>
+            {education.map((edu, i) => (
+              <li key={i}>
+                {edu.degree}, {edu.institution} – {edu.year}
+              </li>
+            ))}
           </ul>
         </section>
 
-        {/* Research Interests Section */}
+        {/* Research Interests */}
         <section>
           <h2>Research Interests</h2>
           <div className="grid">
-            {[
-              "Artificial Intelligence & Machine Learning",
-              "Internet of Things (IoT)",
-              "Embedded Systems & Hardware Design",
-              "TinyML",
-              "Edge & Fog Computing",
-              "UAVs & Drone Systems",
-              "Robotics",
-              "Smart Wearables",
-              "Wireless Sensor Networks",
-              "Cloud & Distributed Computing",
-              "Cyber-Physical Systems",
-              "Human-Computer Interaction",
-            ].map((interest, i) => (
+            {researchInterests.map((interest, i) => (
               <div key={i} className="card">{interest}</div>
             ))}
           </div>
         </section>
 
-        {/* Publications Section */}
-       <section>
-  <h2>Publications</h2>
+        {/* Publications */}
+        <section>
+          <h2>Publications</h2>
+          <div className="filters">
+            {["all", "Conference Paper", "Journal Article", "Book", "Patent"].map((type) => (
+              <button
+                key={type}
+                className={filter === type ? "active" : ""}
+                onClick={() => setFilter(type)}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
 
-  {/* Filter Buttons */}
-  <div className="filters">
-    {["all", "Conference Paper", "Journal Article", "Book Chapter", "Book", "Patent"].map(
-      (type) => (
-        <button
-          key={type}
-          className={filter === type ? "active" : ""}
-          onClick={() => setFilter(type)}
-        >
-          {type}
-        </button>
-      )
-    )}
-  </div>
+          <ul>
+            {filteredPublications.map((pub, i) => (
+              <li key={i} className="card">
+                <h3>{pub.title}</h3>
+                <p><strong>{pub.type}</strong> | {pub.year}</p>
+                {pub.doi && <p>DOI: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noreferrer">{pub.doi}</a></p>}
+                {pub.url && <p>URL: <a href={pub.url} target="_blank" rel="noreferrer">{pub.url}</a></p>}
+                <p>{pub.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-  {/* Publications List */}
-  <ul>
-    {filteredPublications.map((pub, i) => (
-      <li key={i} className="card">
-        <h3>{pub.title}</h3>
-        <p>
-          <strong>{pub.type}</strong> | {pub.year}
-        </p>
-        {/* DOI / ISBN / URL */}
-        {pub.doi && pub.doi !== "Not Available Yet" && (
-          <p>DOI: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer">{pub.doi}</a></p>
-        )}
-        {pub.isbn && (
-          <p>ISBN: {pub.isbn} {pub.asin && `(ASIN: ${pub.asin})`}</p>
-        )}
-        {pub.url && (
-          <p>URL: <a href={pub.url} target="_blank" rel="noopener noreferrer">{pub.url}</a></p>
-        )}
-        {/* Description */}
-        <p>{pub.description}</p>
-      </li>
-    ))}
-  </ul>
-</section>
-
-
-        {/* Achievements Section */}
+        {/* Achievements */}
         <section>
           <h2>Achievements</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card">
-              <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/jispuraskar.jpg" alt="Award" />
-              <h3>JIS Puraskar</h3>
-              <p>Highest DGPA 2024</p>
+          <div className="achievements-carousel">
+            <div className="achievements-track">
+              {achievements.map((a, i) => (
+                <div key={i} className="achievement-card">
+                  <img
+                    src={a.image}
+                    alt={a.title}
+                    className="zoomable"
+                    onClick={() => {
+                      setImageList(achievements.map(x => x.image));
+                      setCurrentIndex(i);
+                      setSelectedImage(a.image);
+                    }}
+                  />
+                  <h3>{a.title}</h3>
+                  <p>{a.description}</p>
+                </div>
+              ))}
             </div>
-            <div className="card">
-              <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/kritiaward.jpg" alt="Grant" />
-              <h3>Kriti Award</h3>
-              <p>Highest GPA 2023</p>
-            </div>
-               <div className="card">
-              <img src="https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/WhatsApp%20Image%202025-09-23%20at%2022.11.45_2989ed6e.jpg" alt="Grant" />
-              <h3>JIS INNOVATION AWARD</h3>
-              <p>Paper Publication 2022</p>
-            </div> 
           </div>
         </section>
 
-     {/* Certificates Section */}
-{/* Certificates Section */}
-<section>
-  <h2>Certificates</h2>
-  <div className="certificates-carousel">
-    <div className="certificates-track">
-      {[
-        "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.31_33273d8e.jpg?raw=true",
-        "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.30_db9b48ec.jpg?raw=true"
-        , "https://raw.githubusercontent.com/soulhydra101/img/refs/heads/main/Chandramouli%20Haldar_Certificate%20for%20Paper%20Presentation%20at%20Bhavisya%20Entrepreneur%202025_page-0001.jpg",
-        "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.16_2dcc8a03.jpg?raw=true",
-        "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.17_29ea9be7.jpg?raw=true",
-             "https://github.com/soulhydra101/img/blob/main/WhatsApp%20Image%202025-09-23%20at%2022.05.16_10de8ebf.jpg?raw=true"
+        {/* Certificates */}
+        <section>
+          <h2>Certificates</h2>
+          <div className="certificates-carousel">
+            <div className="certificates-track">
+              {certificates.map((img, i) => (
+                <div key={i} className="certificate-card">
+                  <img
+                    src={img}
+                    alt={`Certificate ${i + 1}`}
+                    className="zoomable"
+                    onClick={() => {
+                      setImageList(certificates);
+                      setCurrentIndex(i);
+                      setSelectedImage(img);
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      ].map((img, i) => (
-        <div key={i} className="certificate-card">
-          <img src={img} alt={`Certificate ${i + 1}`} />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+        {/* Image Modal with Swipe */}
+        {selectedImage && (
+          <div
+            className="image-modal"
+            onClick={() => setSelectedImage(null)}
+            onTouchStart={(e) => (window._touchX = e.changedTouches[0].screenX)}
+            onTouchEnd={(e) => {
+              const diff = window._touchX - e.changedTouches[0].screenX;
+              if (diff > 50 && currentIndex < imageList.length - 1) {
+                setCurrentIndex(currentIndex + 1);
+                setSelectedImage(imageList[currentIndex + 1]);
+              }
+              if (diff < -50 && currentIndex > 0) {
+                setCurrentIndex(currentIndex - 1);
+                setSelectedImage(imageList[currentIndex - 1]);
+              }
+            }}
+          >
+            {currentIndex > 0 && (
+              <button
+                className="nav-btn left"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentIndex(currentIndex - 1);
+                  setSelectedImage(imageList[currentIndex - 1]);
+                }}
+              >
+                ‹
+              </button>
+            )}
 
+            <img src={selectedImage} alt="Enlarged view" />
 
+            {currentIndex < imageList.length - 1 && (
+              <button
+                className="nav-btn right"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentIndex(currentIndex + 1);
+                  setSelectedImage(imageList[currentIndex + 1]);
+                }}
+              >
+                ›
+              </button>
+            )}
+          </div>
+        )}
       </main>
     </div>
   );
 }
-
-
-
