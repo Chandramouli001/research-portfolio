@@ -1,14 +1,11 @@
 [
-  "Artificial Intelligence & Machine Learning",
+  "AI / ML",
   "Internet of Things (IoT)",
-  "Embedded Systems & Hardware Design",
+  "Embedded Systems",
   "TinyML",
-  "Edge & Fog Computing",
-  "UAVs & Drone Systems",
+  "Cloud & Edge Cmputing",
+  "UAVs & Drones",
   "Robotics",
-  "Smart Wearables",
-  "Wireless Sensor Networks",
-  "Cloud & Distributed Computing",
-  "Cyber-Physical Systems",
-  "Human-Computer Interaction"
+  "Smart Wearables"
 ]
+
