@@ -7,11 +7,32 @@
     "description": "This conference paper investigates the effectiveness of transfer learning techniques for the early and specific identification of Alzheimer’s Disease using medical imaging data. Pre-trained deep learning models are fine-tuned on domain-specific datasets to improve diagnostic accuracy while reducing training complexity and data dependency. The study highlights how transfer learning can enhance feature extraction in neuroimaging, enabling reliable detection of disease patterns at early stages and supporting clinical decision-making."
   },
   {
+    "title": "Prospects and Challenges in UAV-Based Communication for Disaster Management",
+    "type": "Conference Paper",
+    "year": 2025,
+    "doi": "10.1109/AICARE66005.2025.11402816",
+    "description": "The paper proposes a hybrid UAV communication architecture (Satellite + LoRa + FANET) to ensure reliable, low-latency, and energy-efficient connectivity during disaster response operations."
+  },
+  {
     "title": "Design and Development of a Multi-Functional Interactive Robot with Handshake, AI Voice Assistance, Projection, and Mobility",
     "type": "Journal Article",
     "year": 2025,
     "url": "https://ijsci.com/index.php/home/article/view/314",
     "description": "This journal article presents the design and implementation of a multi-functional interactive robot capable of physical interaction through handshaking, AI-based voice assistance, visual projection, and autonomous mobility. The system integrates embedded control, speech recognition, and motion planning to enable natural human–robot interaction. The proposed architecture demonstrates the feasibility of deploying low-cost, intelligent service robots for educational, assistive, and public interaction environments."
+  },
+  {
+    "title": "An ESP32-Based Morse Code Transmission System Using Telegram Bot",
+    "type": "Journal Article",
+    "year": 2026,
+    "doi": "10.5281/zenodo.18438852",
+    "description": "This paper introduces a Morse code transmission system utilizing an ESP32 microcontroller and displaying the decoded message via a Telegram bot in real-time. In contrast to the traditional Morse code inputting methods, which are normally based on a single button with timing distinction between dot and dash, the suggested design utilizes two special buttons for dot and dash, respectively, and another button for sending the entire message."
+  },
+   {
+    "title": "An Intelligent Framework for Real-Time Yoga Pose Detection and Posture Correction",
+    "type": "Journal Article",
+    "year": 2026,
+    "doi":"10.48550/arXiv.2603.26760",
+    "description": "This paper presents a hybrid Edge AI based framework for real time yoga pose detection and posture correction. The proposed system integrates lightweight human pose estimation models with biomechanical feature extraction and a CNN LSTM based temporal learning architecture to recognize yoga poses and analyze motion dynamics. Joint angles and skeletal features are computed from detected keypoints and compared with reference pose configurations to evaluate posture correctness. "
   },
   {
     "title": "RoboDoc: An Autonomous Medical Robot for Primary Health Assessment in Villages",
@@ -47,5 +68,17 @@
     "type": "Patent",
     "year": 2025,
     "description": "This patent presents a smart wearable T-shirt embedded with biomedical sensors for continuous health monitoring. The system is capable of tracking vital parameters such as heart rate, body temperature, and oxygen saturation, with integrated data processing and alert mechanisms. The smart T-shirt is designed for healthcare, elderly monitoring, and emergency response applications, offering a comfortable and non-invasive solution for real-time medical supervision."
+  },
+  {
+    "title": "Medicinal Plant Identification and Classification Of Himalayan Region - A UAV Integrated Deep Learning Approach",
+    "type": "Patent",
+    "year": 2026,
+    "description": "This technology provides a deep learning system that incorporates Unmanned Aerial Vehicles (UAVs) to automatically recognize and classify medicinal plants in the Himalaya. The UAV can take high-quality geotagged images of plants in remote areas with its GPS, onboard edge processing, and high-definition camera. The drone is responsible for initial processing and the final processing for classification is performed on the cloud using a ResNet-152 V2 model."
+  },
+  {
+    "title": "An intelligent fire fighting system to save forests with early notifications",
+    "type": "Patent",
+    "year": 2026,
+    "description": "The current invention reveals a smart forest fire system intervention, anticipation and early warning system based on Internet of Things (IoT), and machine learning with the aim of dealing with the increasing risk of uncontrolled forest fires. The forest fires are very unpredictable and spread very fast because there is variation in some environmental parameters in terms of temperature, humidity, soil moisture, vegetation dryness, and human activities. "
   }
 ]
