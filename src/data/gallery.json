@@ -1,0 +1,47 @@
+[
+  {
+    "title": "📍at SURTECH",
+    "description": "Conducted BCT training on IoT",
+    "image": "./img/g9.jpeg"
+  },
+   {
+    "title": "📍at JISCE",
+    "description": "Conducted BCT training on VLSI",
+    "image": "./img/g1.png"
+  },
+  {
+    "title": "📍at JIS University",
+    "description": "Conducted BCT training on MongoDB",
+    "image": "./img/g2.png"
+  },
+  {
+    "title": "📍at AIT, Bangkok",
+    "description": "for Global Innovation Internship Program",
+    "image": "./img/g6.png"
+  },
+  {
+    "title": "📍at UEM, Kolkata",
+    "description": "for 3rd International Confernce (RAAISA 2025)",
+    "image": "./img/g8.png"
+  },
+  {
+    "title": "Tech Winter Break organized by GDG",
+    "description": "Conducted a Session on TinyML",
+    "image": "./img/g3.png"
+  },
+  {
+    "title": "📍at AIT, Bangkok",
+    "description": "with Dr. Rishi Jain Sir",
+    "image": "./img/g4.png"
+  },
+  {
+    "title": "📍at AIT, Bangkok",
+    "description": "with Prof. (Dr.) Nitin Kumar Tripathi Sir",
+    "image": "./img/g5.png"
+  },
+  {
+    "title": "Global Innovation Internship Program",
+    "description": "",
+    "image": "./img/g7.png"
+  }
+]

@@ -22,14 +22,14 @@
   },
   {
     "title": "An ESP32-Based Morse Code Transmission System Using Telegram Bot",
-    "type": "Journal Article",
+    "type": "Preprint",
     "year": 2026,
     "doi": "10.5281/zenodo.18438852",
     "description": "This paper introduces a Morse code transmission system utilizing an ESP32 microcontroller and displaying the decoded message via a Telegram bot in real-time. In contrast to the traditional Morse code inputting methods, which are normally based on a single button with timing distinction between dot and dash, the suggested design utilizes two special buttons for dot and dash, respectively, and another button for sending the entire message."
   },
    {
     "title": "An Intelligent Framework for Real-Time Yoga Pose Detection and Posture Correction",
-    "type": "Journal Article",
+    "type": "arXiv",
     "year": 2026,
     "doi":"10.48550/arXiv.2603.26760",
     "description": "This paper presents a hybrid Edge AI based framework for real time yoga pose detection and posture correction. The proposed system integrates lightweight human pose estimation models with biomechanical feature extraction and a CNN LSTM based temporal learning architecture to recognize yoga poses and analyze motion dynamics. Joint angles and skeletal features are computed from detected keypoints and compared with reference pose configurations to evaluate posture correctness. "
@@ -80,5 +80,34 @@
     "type": "Patent",
     "year": 2026,
     "description": "The current invention reveals a smart forest fire system intervention, anticipation and early warning system based on Internet of Things (IoT), and machine learning with the aim of dealing with the increasing risk of uncontrolled forest fires. The forest fires are very unpredictable and spread very fast because there is variation in some environmental parameters in terms of temperature, humidity, soil moisture, vegetation dryness, and human activities. "
+  },
+  {
+    "title": "IoT-based smart solar charging bag with integrated security and emergency features",
+    "type": "Patent",
+    "year": 2026,
+    "description": "The IoT-enabled smart solar charging bag integrates exterior high-efficiency solar panels, a buck-boost power conditioning module, a removable battery bank, multiple charging interfaces including USB-C, USB-A, Micro-USB and Qi wireless charging, and an ESP32-based IoT controller with integrated GSM and GPS modules; the controller monitors solar generation, voltage and current, and battery state, displays data on an on-board OLED and transmits telemetry via GSM to a mobile application "
+  },
+  {
+    "title": "TinyML-Enabled IoT Systems: Recent Advancements in Tiny Machine Learnin",
+    "type": "Book",
+    "year": 2026,
+    "isbn": "978-9359400167",
+    "asin": "B0H5QRN56M",
+    "url": "https://www.amazon.in/dp/B0H5QRN56M",
+    "description": "The book TinyML-Enabled IoT Systems: Recent Advancement in Tiny Machine Learning presents a comprehensive exploration of Tiny Machine Learning (TinyML), an emerging field that enables machine learning models to run efficiently on ultra-low- power embedded and edge devices."
+  },
+   {
+    "title": "Introduction to TinyML: The New Era of Low-Power AI for IoT Devices",
+    "type": "Book Chapter",
+    "year": 2026,
+    "url": "https://doi.org/10.5281/zenodo.20659369",
+    "description": "This chapter presents a comprehensive introduction to TinyML, examining its evolution from conventional cloud-centric AI and Edge AI architectures toward distributed embedded intelligence. The chapter discusses the fundamental architecture of TinyML systems, key model optimization and deployment techniques, including quantization, pruning, and model compression, as well as hardware-aware design strategies for efficient on-device inference."
+  },
+   {
+    "title": "Algorithmic Foundations of TinyML for Resource-Constrained IoT Devices",
+    "type": "Book Chapter",
+    "year": 2026,
+    "url": "https://doi.org/10.5281/zenodo.20663435",
+    "description": " This chapter presents an exhaustive analysis of the algorithms that can be used in the context of TinyML, with emphasis on the essential characteristics of the algorithms, which include their resourcefulness, low power consumption, computational simplicity, real-time processing, robustness against noisy data, and interpretability of results."
   }
 ]
