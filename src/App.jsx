@@ -499,42 +499,50 @@ const pubTypes = [
 
         {/* ════════════════ MAIN ═══════ */}
         <main className="rp-main">
+{/* ABOUT */}
+<section className="rp-section" id="about">
+  <SectionHeading>About</SectionHeading>
 
-          {/* ABOUT */}
-          <section className="rp-section" id="about">
-            <SectionHeading>About</SectionHeading>
-            <div className="bio-text">
-              <p>
-                Chandramouli Haldar is an undergraduate researcher and technology professional
-                from Kolkata, India, currently pursuing a{" "}
-                <strong>Bachelor of Technology in Computer Science &amp; Engineering</strong> at
-                Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal. His
-                academic foundation is further reinforced by a{" "}
-                <strong>Diploma in Electronics &amp; Telecommunication Engineering</strong> from
-                the West Bengal State Council of Technical Education — providing a rare dual
-                perspective spanning both hardware and software disciplines.
-              </p>
-              <p>
-                He gained significant international academic exposure through a research internship
-                at the <strong>Asian Institute of Technology (AIT), Bangkok, Thailand</strong>, where
-                he worked on innovation-focused projects involving geospatial data analysis, QGIS
-                workflows, and real-world satellite datasets. This experience shaped his commitment
-                to applied, impact-driven research.
-              </p>
-              <p>
-                As <strong>Founder and Chief Technology Officer of NovaTech Innovative Solutions</strong>,
-                Chandramouli leads engineering strategy and product development for smart infrastructure
-                technologies. He also serves as{" "}
-                <strong>Junior Technical Faculty at Euphoria GenX</strong>, mentoring students in
-                database engineering, full-stack development, and hands-on MongoDB training.
-              </p>
-              <p>
-                Beyond technology, he is an active learner of the Japanese language — inspired by
-                Japan's thoughtful integration of centuries-old cultural heritage with world-leading
-                technological innovation.
-              </p>
-            </div>
-          </section>
+  <div className="bio-text">
+    <p>
+      <strong>Chandramouli Haldar</strong> is a graduate researcher, technology
+      professional, and entrepreneur based in Kolkata, India. He holds a{" "}
+      <strong>Bachelor of Technology in Computer Science &amp; Engineering</strong>{" "}
+      and a{" "}
+      <strong>Diploma in Electronics &amp; Telecommunication Engineering</strong>{" "}
+      from Guru Nanak Institute of Technology, providing a strong interdisciplinary
+      foundation across both hardware and software engineering.
+    </p>
+
+    <p>
+      He gained international research experience through the{" "}
+      <strong>Global Innovation Internship Program</strong> at the{" "}
+      <strong>Asian Institute of Technology (AIT), Bangkok, Thailand</strong>,
+      where he contributed to projects involving geospatial data analysis, QGIS,
+      and IoT-based solutions for carbon footprint monitoring and sustainability,
+      strengthening his commitment to innovation-driven research with real-world
+      impact.
+    </p>
+
+    <p>
+      As the{" "}
+      <strong>Founder and Chief Executive Officer of NovaTech Innovative Solutions</strong>,
+      Chandramouli leads research, engineering, and product development in the
+      fields of IoT, Embedded Systems, Artificial Intelligence, and Smart
+      Technologies. He also serves as a{" "}
+      <strong>Junior Technical Faculty at Euphoria GenX</strong>, mentoring
+      students in software development, database systems, Embedded Systems, IoT,
+      and VLSI through hands-on, project-based learning.
+    </p>
+
+    <p>
+      Beyond his professional work, he is an enthusiastic learner of the Japanese
+      language, inspired by Japan's unique ability to preserve its rich cultural
+      heritage while remaining at the forefront of global technological
+      innovation.
+    </p>
+  </div>
+</section>
 
           {/* EXPERIENCE */}
           <section className="rp-section" id="experience">
