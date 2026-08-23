@@ -1,6 +1,24 @@
 [
+  
   {
-    "title": "Cirtificate of Athorship",
+    "title": "Certificate of Review",
+    "description": "",
+    "image": "./img/c10.jpg"
+  },
+  
+  {
+    "title": "Certificate of Athorship",
+    "description": "",
+    "image": "./img/c9.jpg"
+  },
+  
+  {
+    "title": "Certificate of Athorship",
+    "description": "",
+    "image": "./img/c111.jpeg"
+  },
+  {
+    "title": "Certificate of Athorship",
     "description": "",
     "image": "./img/c6.jpeg"
   },
@@ -10,32 +28,32 @@
     "image": "./img/c1.jpg"
   },
   {
-    "title": "Cirtificate of Participation",
+    "title": "Certificate of Participation",
     "description": "",
     "image": "./img/c5.jpeg"
   },
   {
-    "title": "Cirtificate of Participation",
+    "title": "Certificate of Participation",
     "description": "",
     "image": "./img/c2.jpg"
   },
   {
-    "title": "Cirtificate of Presentation",
+    "title": "Certificate of Presentation",
     "description": "",
     "image": "./img/c3.jpg"
   },
   {
-    "title": "Cirtificate of Publication",
+    "title": "Certificate of Publication",
     "description": "",
     "image": "./img/c8.png"
   },
   {
-    "title": "Cirtificate of Acivemnet",
+    "title": "Certificate of Acivemnet",
     "description": "",
     "image": "./img/c4.jpg"
   },
   {
-    "title": "Cirtificate of Acivemnet",
+    "title": "Certificate of Acivemnet",
     "description": "",
     "image": "./img/c7.jpeg"
   }
