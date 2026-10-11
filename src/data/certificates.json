@@ -1,5 +1,9 @@
 [
-  
+  {
+    "title": "Certificate of Completion",
+    "description": "By Harvard University",
+    "image": "./img/CS50AI.png"
+  },
   {
     "title": "Certificate of Review",
     "description": "",
