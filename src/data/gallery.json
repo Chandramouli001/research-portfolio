@@ -1,4 +1,26 @@
 [
+ 
+  {
+    "title": "📍at GNIT",
+    "description": "MoU with ECE Department, GNIT",
+    "image": "./img/classgnit1.jpeg"
+  },
+   {
+    "title": "📍at GNIT",
+    "description": "Awarded by Principal, GNIT",
+    "image": "./img/classgnit1.jpeg"
+  },
+   {
+    "title": "📍at GNIT",
+    "description": "Conducted Workshop on IoT",
+    "image": "./img/award122.jpeg"
+  },
+  {
+    "title": "📍at GNIT",
+    "description": "Conducted Workshop on IoT",
+    "image": "./img/classgnit1.jpeg"
+  },
+ 
  {
     "title": "📍at NiT",
     "description": "Conducted BCT training on Robotics",
@@ -23,6 +45,16 @@
     "title": "📍at JIS University",
     "description": "Conducted BCT training on MongoDB",
     "image": "./img/g2.png"
+  },
+ {
+    "title": "📍at GNIT, Kolkata",
+    "description": "1st Runnerup Techverse 3.0",
+    "image": "./img/award121.jpeg"
+  },
+   {
+    "title": "📍at Bart Lab, Bnagkok",
+    "description": "Lab Visit",
+    "image": "./img/bartlab.jpeg"
   },
   {
     "title": "📍at AIT, Bangkok",
